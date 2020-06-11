@@ -11,10 +11,7 @@ router.get("/", (req, res) => {
 // pistake page clicks through to home page displaying students
 router.get('/home/students', (req,res)=>{
   db.getStudents()
-  .then(()=>{
-
-  })
-  res.render('home/students')
+  .then(obj=>  res.render('home/students', {obj:obj}))
 })
 
 router.get("/home/profile/:id", (req,res)=>{
