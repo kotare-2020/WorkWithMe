@@ -1,6 +1,7 @@
 .awful {
     background-color: rgb(203, 50, 134);
     color: limegreen;
+    text-align: center;
 }
 
 .awful h1 {
@@ -17,4 +18,8 @@
 
 .awful h4 {
     color:  rgb(203, 108, 160)
+}
+
+.notAweful {
+    background-color: rgb(211, 205, 205);
 }
