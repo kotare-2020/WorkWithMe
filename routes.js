@@ -12,6 +12,10 @@ router.get("/", (req, res) => {
 router.get('/home/students', (req,res)=>{
   res.render('home/students')
 })
-
+  if(err){
+    console.log("got an error => " + err)
+  }
+  res.render("home/index", err)
+})
 
 module.exports = router
