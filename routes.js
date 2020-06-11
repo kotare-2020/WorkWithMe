@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 
+const db = require('./db')
 
 router.get("/", (req, res) => {
   if(err){
@@ -8,8 +9,5 @@ router.get("/", (req, res) => {
   }
   res.render("home/index", err)
 })
-
-router.get("profile/:id", )
-
 
 module.exports = router

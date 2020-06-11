@@ -44,5 +44,17 @@
 
 /* REAL_home styling */
 .notAweful {
-    background-color: rgb(211, 205, 205);
+    background-color: #dfe4dc;
+    font-family: 'Karla', sans-serif;
+    width: 85%;
+}
+
+.container {
+    display: block;
+    background-color: #A6C9AC;
+}
+
+.container img {
+    width: 65px;
+    height: 65px;
 }
