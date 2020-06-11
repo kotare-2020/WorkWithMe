@@ -1,0 +1,25 @@
+.awful {
+    background-color: rgb(203, 50, 134);
+    color: limegreen;
+    text-align: center;
+}
+
+.awful h1 {
+    color:  rgb(221, 63, 150);
+}
+
+.awful h2 {
+    color:  rgb(208, 89, 154);
+}
+
+.awful h3 {
+    color:  rgb(209, 107, 163);
+}
+
+.awful h4 {
+    color:  rgb(203, 108, 160)
+}
+
+.notAweful {
+    background-color: rgb(211, 205, 205);
+}
