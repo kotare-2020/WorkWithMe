@@ -1,7 +1,9 @@
+/* fake_home styling */
 .awful {
     background-color: rgb(203, 50, 134);
-    color: limegreen;
     text-align: center;
+    font-family: 'Comic Neue', cursive;;
+    margin: 25%
 }
 
 .awful h1 {
@@ -20,6 +22,27 @@
     color:  rgb(203, 108, 160)
 }
 
+.aweful a:link {
+       color: limegreen;
+       text-decoration: none;
+}
+
+.aweful a:visited {
+    color: limegreen;
+    text-decoration: none;
+}
+
+.aweful a:hover {
+    color: forestgreen;
+    text-decoration: none;
+}
+
+.aweful a:active {
+    color: limegreen;
+    text-decoration: none;
+}
+
+/* REAL_home styling */
 .notAweful {
     background-color: rgb(211, 205, 205);
 }
