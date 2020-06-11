@@ -1,12 +1,15 @@
 const express = require("express")
 const router = express.Router()
 
+
 router.get("/", (req, res) => {
-  res.send("test")
-  .catch(err => {
-    res.send("It's not working :(", err)
-  })
+  if(err){
+    console.log("got an error => " + err)
+  }
+  res.render("home/index", err)
 })
+
+router.get("profile/:id", )
 
 
 module.exports = router
