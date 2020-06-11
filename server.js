@@ -2,7 +2,7 @@ const express = require('express')
 const hbs = require('express-handlebars')
 
 // Placeholder for whatever you want to call it
-const dbFunctions = require('./db')
+// const dbFunctions = require('./db')
 
 const routes = require('./routes')
 
