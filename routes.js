@@ -10,12 +10,23 @@ router.get("/", (req, res) => {
 
 // pistake page clicks through to home page displaying students
 router.get('/home/students', (req,res)=>{
+  db.getStudents()
+  .then(()=>{
+
+  })
   res.render('home/students')
 })
-  if(err){
-    console.log("got an error => " + err)
-  }
-  res.render("home/index", err)
+
+router.get("/home/profile/:id", (req,res)=>{
+  const id = req.params.id
+  db.getStudentTopics(id)
+  .then((student)=>{
+    res.render('home/profile',student)
+  })
+  .catch(err =>{
+    console.log(err)
+  })
 })
+
 
 module.exports = router
