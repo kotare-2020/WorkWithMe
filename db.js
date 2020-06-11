@@ -21,12 +21,11 @@ function shuffle(arr) {
 
 function getStudentTopics (id, db = connection) {
   return db('students')
-  .join('topics', 'topics.id', 'students.id'
-  //'students.id AS student_id')
-
-
+  .join('topics', 'topics.id', 'students.fave', 'students.least_fave')
+  .where({'students.id': id}).first()
+}
 
 module.exports = {
   getStudents: getStudents,
+  getStudentTopics: getStudentTopics, 
   shuffle: shuffle,
-}
