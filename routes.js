@@ -3,17 +3,19 @@ const router = express.Router()
 
 const db = require('./db')
 
+// piss take page on load
 router.get("/", (req, res) => {
-  res.send("test")
-  .catch(err => {
-    res.send("It's not working :(", err)
-  })
+  res.render("home")
 })
 
-// router.post('/', (req,res)=>{
-
-
-// })
-
+// pistake page clicks through to home page displaying students
+router.get('/home/students', (req,res)=>{
+  res.render('home/students')
+})
+  if(err){
+    console.log("got an error => " + err)
+  }
+  res.render("home/index", err)
+})
 
 module.exports = router
