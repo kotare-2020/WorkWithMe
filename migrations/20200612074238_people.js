@@ -4,8 +4,8 @@ exports.up = function(knex) {
     table.increments('id').primary()
     table.string('name')
     table.string('image')
-    table.integer('fave')
-    table.integer('least_fave')
+    table.integer('fave').references('topics.id')
+    table.integer('least_fave').references('topics.id')
   })
 };
 
