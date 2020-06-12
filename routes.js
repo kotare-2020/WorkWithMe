@@ -11,19 +11,48 @@ router.get("/", (req, res) => {
 // pistake page clicks through to home page displaying students
 router.get('/home/students', (req,res)=>{
   db.getStudents()
-  .then(obj=>  res.render('home/students', {obj:obj}))
+  .then(students=>  res.render('home/students', {students:students}))
 })
 
 router.get("/home/profile/:id", (req,res)=>{
-  const id = req.params.id
-  db.getStudentTopics(id)
-  .then((student)=>{
+  const id = Number(req.params.id)
+  console.log(id)
+
+db.getFaveTopic(id)
+.then((student)=>{
+  console.log(student)
+  return db.getLeastFave(id)
+  .then((obj)=>{
+    console.log(obj)
+    student.leastFave = obj.least_topic
+    console.log(student)
     res.render('home/profile',student)
-  })
-  .catch(err =>{
+    })
+    .catch(err =>{
     console.log(err)
+    })
   })
 })
 
+
+// db.joinUserPost(id)
+// .then((post)=>{
+//   console.log('Post' , post)
+//   return db.joinUserProfile(id)
+//     .then(profile => {
+//       console.log("Profile" ,profile)
+//       profile.post = post
+//       console.log(profile)
+//       res.render('profile', profile)    
+//     })
+//     .catch(err => {
+//       res.status(500).send('DATABASE ERROR: ' + err.message)
+//     })
+// })
+
+
+  // db.getStudentTopics(id)
+  // .then((student)=>{
+  //   console.log(student)
 
 module.exports = router
