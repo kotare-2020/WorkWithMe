@@ -9,13 +9,37 @@
         <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <div class="profile">
-        <h1>Student Profile:</h1>
+    <h1>Student Profile:</h1>
     <body class="notAwful">
             <img src="Images/fai.jpg" ref="picture of {{name}}">
             <h2>{{name}}</h2>
                 <h4>Favourite topic: {{fave}}</h4>
                 <h4>Least favourite topic: {{least_fave}}</h4>
-            <button type="button" onclick="">Edit</button>
+                <button onclick="myFunction()">Edit</button>
+
+                <div id="myDIV">
+                    <form>
+                        {{#each topics}}
+                        <label>Favourite Topic:</label>
+                        <option value="{{fave}}">{{topic}}</option>
+                        <br>
+                        <label>Least Favourite Topic:</label>
+                        <option value={{least_fave}}>{{topic}}</option>
+                        <br>
+                        {{/each}}
+                    </form>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        let x = document.getElementById("myDIV");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
     </body>
     </div>
 </html>

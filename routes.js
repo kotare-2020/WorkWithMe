@@ -35,6 +35,20 @@ db.getFaveTopic(id)
 })
 
 
+router.post('/profile', (req, res) => {
+  let fave = req.body.favourite
+  let least = req.body.least_favourite
+
+  db.insertFavourite(fave, least)
+  .then(()=> {
+    console.log(fave, least)
+    res.redirect('/students')
+  })
+  .catch (err => {
+    console.log(err)
+  })
+})
+
 // db.joinUserPost(id)
 // .then((post)=>{
 //   console.log('Post' , post)
