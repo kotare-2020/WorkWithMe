@@ -20,14 +20,22 @@ function shuffle(arr) {
     return arr
 }
 
-function getStudentTopics (id, db = connection) {
+function getFaveTopic (id, db = connection) {
   return db('students')
-  .join('topics', 'topics.id', 'students.fave', 'students.least_fave')
-  .where({'students.id': id}).first()
+  .join('topics', 'topics.id', 'students.fave')
+  .where({'students.id': id}).first().select('topics.topic as fave_topic', '*')
+}
+
+function getLeastFave (id, db = connection) {
+  return db('students')
+  .join('topics', 'topics.id', 'students.least_fave')
+  .where({'students.id': id}).first().select('topics.topic as least_topic', '*')
 }
 
 module.exports = {
   getStudents: getStudents,
-  getStudentTopics: getStudentTopics, 
+  getFaveTopic: getFaveTopic, 
   shuffle: shuffle,
+  getLeastFave: getLeastFave
 }
+ 
