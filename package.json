@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index --watchAll --noStackTrace",
     "start": "node index",
-    "build": "knex migrate:latest"
+    "postinstall": "knex migrate:latest"
   },
   "author": "",
   "license": "ISC",
