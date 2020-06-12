@@ -24,6 +24,10 @@ function shuffle(arr) {
   return arr
 }
 
+function getTopics(db = connection){
+  return db('topics').select()
+}
+
 function getFaveTopic(id, db = connection) {
   return db("students")
     .join("topics", "topics.id", "students.fave")
@@ -45,4 +49,5 @@ module.exports = {
   getFaveTopic: getFaveTopic,
   shuffle: shuffle,
   getLeastFave: getLeastFave,
+  getTopics:getTopics
 }
