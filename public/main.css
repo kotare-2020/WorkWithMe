@@ -22,39 +22,79 @@
     color:  rgb(203, 108, 160)
 }
 
-.aweful a:link {
-       color: limegreen;
-       text-decoration: none;
-}
-
-.aweful a:visited {
-    color: limegreen;
-    text-decoration: none;
-}
-
-.aweful a:hover {
-    color: forestgreen;
-    text-decoration: none;
-}
-
-.aweful a:active {
+.awful a {
     color: limegreen;
     text-decoration: none;
 }
 
 /* REAL_home styling */
-.notAweful {
-    background-color: #dfe4dc;
+.notAwful {
+    background-color: #F4F6F3;
     font-family: 'Karla', sans-serif;
-    width: 85%;
+    text-align: center;
+    margin: 0;
+}
+
+.notAwful img {
+    width: 300px;
+    margin-top: 20px;
 }
 
 .container {
     display: block;
-    background-color: #A6C9AC;
+    background-color: #6A9FC8;
+    width: 80%;
+    margin: 0 10%;
+    border-radius: 10px;
+} 
+
+.subcontainer {
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #143642;
+    width: 20%;
+    margin: 2%;
+    background-color: #F4F6F3;
+    border-radius: 3%;
 }
 
-.container img {
-    width: 65px;
-    height: 65px;
+.subcontainer img {
+    display: block;
+    width: 90%;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+header {
+    text-align: center;
+} 
+
+.simple {
+    text-decoration: none;
+}
+
+.simple:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    background-color:#92dbc6;
+    margin: 20px 20%;
+    padding: 20px;
+}
+
+button {
+    display: block;
+    float: center;
+    padding: 0.5em 3em;
+    border: 0.16em solid #656969;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #656969;
+    text-align: center;
+    background-color: #92dbc6;
 }

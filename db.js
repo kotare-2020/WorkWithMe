@@ -7,9 +7,10 @@ const connection = knex(config[env])
 
  function getStudents(db = connection){
    return db('students').select()
+   .then(student=>{
+     return shuffle(student)
+   })
  }
-
-var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 function shuffle(arr) {
     for (let initialPlace = arr.length - 1; initialPlace > 0; initialPlace--) {
@@ -29,3 +30,4 @@ module.exports = {
   getStudents: getStudents,
   getStudentTopics: getStudentTopics, 
   shuffle: shuffle,
+}
