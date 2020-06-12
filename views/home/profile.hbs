@@ -1,11 +1,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
     <div class="profile">
-        <body class="notAwful">
         <h1>Student Profile:</h1>
+        <body class="notAwful">
             <img src="{{image}}" ref="picture of {{name}}">
             <h2>{{name}}</h2>
                 <h4>Favourite topic: {{fave_topic}}</h4>
                 <h4>Least favourite topic: {{leastFave}}</h4>
-            <button type="button" onclick="">Edit</button>
+                <button onclick="myFunction()">Edit</button>
+
+                <div style="display:none" id="myDIV">
+                    <form method = "POST" action = "profile.hbs">
+                        <label><strong>Favourite Topic:</strong></label>
+                        <select name="favourite">
+                            {{#each topic}}
+                            <option value="{{id}}">{{topic}}</option>
+                            {{/each}}
+                        </select>
+                        <br>
+                        <label><strong>Least Favourite Topic:</strong></label>
+                        <select name="least_favourite">
+                            {{#each topic}}
+                            <option value="{{id}}">{{topic}}</option>
+                            {{/each}}
+                        </select>
+                        <br>
+                        <input type ="submit"></input>
+                    </form>
+                </div>
+
+                <script>
+                    function myFunction() {
+                        let x = document.getElementById("myDIV");
+                        if (x.style.display === "none") {
+                            x.style.display = "block";
+                        } else {
+                            x.style.display = "none";
+                        }
+                    }
+                </script>
         </body>
     </div>
+</div>

@@ -44,10 +44,16 @@ function getLeastFave(id, db = connection) {
     .select("topics.topic as least_topic", "*")
 }
 
+function insertFavourite (fave, least, db = connection){
+  return db('students')
+  .insert({fave: fave, least_fave: least})
+}
+
 module.exports = {
   getStudents: getStudents,
   getFaveTopic: getFaveTopic,
   shuffle: shuffle,
   getLeastFave: getLeastFave,
-  getTopics:getTopics
+  insertFavourite: insertFavourite,
+  getTopics:getTopics,
 }

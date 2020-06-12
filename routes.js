@@ -57,6 +57,29 @@ db.getFaveTopic(id)
 //       res.render('home/profile',student)
 //       })
 
+router.post('/profile', (req, res) => {
+  let fave = req.body.favourite
+  let least = req.body.least_favourite
+
+  db.insertFavourite(fave, least)
+  .then(()=> {
+    console.log(fave, least)
+    res.redirect('/students')
+  })
+  .catch (err => {
+    console.log(err)
+  })
+})
+
+// db.joinUserPost(id)
+// .then((post)=>{
+//   console.log('Post' , post)
+//   return db.joinUserProfile(id)
+//     .then(profile => {
+//       console.log("Profile" ,profile)
+//       profile.post = post
+//       console.log(profile)
+//       res.render('profile', profile)    aster
 //     })
 //     .catch(err =>{
 //     console.log(err)
