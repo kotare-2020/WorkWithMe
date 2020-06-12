@@ -20,10 +20,10 @@ router.get("/home/profile/:id", (req,res)=>{
 
 db.getFaveTopic(id)
 .then((student)=>{
-  console.log(student)
+  // console.log(student)
   return db.getLeastFave(id)
   .then((obj)=>{
-    console.log(obj)
+    // console.log(obj)
     student.leastFave = obj.least_topic
     console.log(student)
     res.render('home/profile',student)
@@ -34,6 +34,28 @@ db.getFaveTopic(id)
   })
 })
 
+// router.get("/home/profile/:id", (req,res)=>{
+//   const id = Number(req.params.id)
+//   console.log(id)
+
+// db.getFaveTopic(id)
+// .then((student)=>{
+//   // console.log(student)
+//   return db.getLeastFave(id)
+//   .then((obj)=>{
+//     // console.log(obj)
+//     student.leastFave = obj.least_topic
+//     return db.getTopics()
+//     .then((topics)=>{
+//       // topics.forEach(topic => {
+        
+//       // })
+//       // let data = {topics}
+//       student.topics = topics
+//       console.log(topics)
+//       console.log(student)
+//       res.render('home/profile',student)
+//       })
 
 router.post('/profile', (req, res) => {
   let fave = req.body.favourite
@@ -57,16 +79,12 @@ router.post('/profile', (req, res) => {
 //       console.log("Profile" ,profile)
 //       profile.post = post
 //       console.log(profile)
-//       res.render('profile', profile)    
+//       res.render('profile', profile)    aster
 //     })
-//     .catch(err => {
-//       res.status(500).send('DATABASE ERROR: ' + err.message)
+//     .catch(err =>{
+//     console.log(err)
 //     })
+//   })
 // })
-
-
-  // db.getStudentTopics(id)
-  // .then((student)=>{
-  //   console.log(student)
 
 module.exports = router
