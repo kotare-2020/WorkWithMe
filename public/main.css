@@ -35,6 +35,11 @@
   margin: 0;
 }
 
+.notAwful img {
+    width: 300px;
+    margin-top: 20px;
+}
+
 .container {
   display: block;
   background-color: #6a9fc8;
@@ -71,4 +76,25 @@ header {
 
 .simple:hover {
   text-decoration: underline;
+}
+
+.profile {
+    background-color:#92dbc6;
+    margin: 20px 20%;
+    padding: 20px;
+}
+
+button {
+    display: block;
+    float: center;
+    padding: 0.5em 3em;
+    border: 0.16em solid #656969;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #656969;
+    text-align: center;
+    background-color: #92dbc6;
 }
