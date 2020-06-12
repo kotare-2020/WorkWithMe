@@ -1,38 +1,38 @@
 /* fake_home styling */
 .awful {
-    background-color: rgb(203, 50, 134);
-    text-align: center;
-    font-family: 'Comic Neue', cursive;;
-    margin: 25%
+  background-color: rgb(203, 50, 134);
+  text-align: center;
+  font-family: "Comic Neue", cursive;
+  margin: 25%;
 }
 
 .awful h1 {
-    color:  rgb(221, 63, 150);
+  color: rgb(221, 63, 150);
 }
 
 .awful h2 {
-    color:  rgb(208, 89, 154);
+  color: rgb(208, 89, 154);
 }
 
 .awful h3 {
-    color:  rgb(209, 107, 163);
+  color: rgb(209, 107, 163);
 }
 
 .awful h4 {
-    color:  rgb(203, 108, 160)
+  color: rgb(203, 108, 160);
 }
 
 .awful a {
-    color: limegreen;
-    text-decoration: none;
+  color: limegreen;
+  text-decoration: none;
 }
 
 /* REAL_home styling */
 .notAwful {
-    background-color: #F4F6F3;
-    font-family: 'Karla', sans-serif;
-    text-align: center;
-    margin: 0;
+  background-color: #f4f6f3;
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  margin: 0;
 }
 
 .notAwful img {
@@ -41,41 +41,41 @@
 }
 
 .container {
-    display: block;
-    background-color: #6A9FC8;
-    width: 80%;
-    margin: 0 10%;
-    border-radius: 10px;
-} 
+  display: block;
+  background-color: #6a9fc8;
+  width: 80%;
+  margin: 20px 10%;
+  border-radius: 10px;
+}
 
 .subcontainer {
-    display: inline-block;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #143642;
-    width: 20%;
-    margin: 2%;
-    background-color: #F4F6F3;
-    border-radius: 3%;
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #143642;
+  width: 20%;
+  margin: 2%;
+  background-color: #f4f6f3;
+  border-radius: 3%;
 }
 
 .subcontainer img {
-    display: block;
-    width: 90%;
-    margin: 10px;
-    border-radius: 5px;
+  display: block;
+  width: 90%;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 header {
-    text-align: center;
-} 
+  text-align: center;
+}
 
 .simple {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .simple:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .profile {
